@@ -3,13 +3,13 @@
 # *********************************
 
 # List of files
-list_files: "/bulk/IMCshared_bulk/sycuro_shared_projects/Davide_TS/metagenotate/snakemake_files/TS_sample_list.txt"
+list_files: "/home/kevin.muirhead/metqc_update/metqc/KG_files.txt"
 
 # Input directory Path to raw sequences
-input_dir: "/bulk/IMCshared_bulk/sycuro_shared_projects/Davide_TS/Raw"
+input_dir: "/bulk/sycuro_bulk/lsycuro_labshare/kevin/417_419_Project_2020_2021/datasets/KG_18_metagenomics"
 
 # Output directory path for output files.
-output_dir: "/bulk/IMCbinf_bulk/ewandson/projects/metqc/results"
+output_dir: "/work/sycuro_lab/kevin/metqc_test_2021-06-23"
 
 # Suffix for forward reads.
 forward_read_suffix: "_R1.fastq"
@@ -26,7 +26,7 @@ qc_only: FALSE
 num_cpus: 7
 
 # Choose whether to run cutadapt
-run_cutadapt: FALSE
+run_cutadapt: TRUE
 
 # Adapters for cutadapt
 fwd_adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
@@ -48,12 +48,12 @@ lc_threshold: 7
 minlength: 60
 
 # Maximum number of N bases allowed
-maxn: 10
+maxn: 15
 
 ### BMtagger Parameters
 
 # Choose whether to run bmtagger
-run_bmtagger: FALSE
+run_bmtagger: TRUE
 
 # Index for bmfilter (part of bmtagger), bitmask file
 bmfilter_ref: "/bulk/IMCshared_bulk/shared/dbs/bmtaggerDB/hg19_rRNA_mito_Hsapiens_rna/hg19_rRNA_mito_Hsapiens_rna_reference.bitmask"
@@ -67,3 +67,4 @@ run_bbmap: FALSE
 
 # Path and name of reference fasta for bbmap
 bbmap_ref: "/home/aschick/refs/hs37.fa"
+
