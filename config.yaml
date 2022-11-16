@@ -3,7 +3,7 @@
 # *********************************
 
 # List of files
-list_files: "/bulk/IMCshared_bulk/sycuro_shared_projects/Davide_TS/metagenotate/snakemake_files/TS_sample_list.txt"
+list_files: "/bulk/IMCshared_bulk/sycuro_shared_projects/Davide_TS/list_files.txt"
 
 # Input directory Path to raw sequences
 input_dir: "/bulk/IMCshared_bulk/sycuro_shared_projects/Davide_TS/Raw"
@@ -12,10 +12,10 @@ input_dir: "/bulk/IMCshared_bulk/sycuro_shared_projects/Davide_TS/Raw"
 output_dir: "/bulk/IMCbinf_bulk/ewandson/projects/metqc/results"
 
 # Suffix for forward reads.
-forward_read_suffix: "_R1.fastq"
+forward_read_suffix: "_R1.fastq.gz"
 
 # Suffix for reverse reads.
-reverse_read_suffix: "_R2.fastq"
+reverse_read_suffix: "_R2.fastq.gz"
 
 # Run fastqc and multiqc only
 qc_only: FALSE
@@ -26,7 +26,7 @@ qc_only: FALSE
 num_cpus: 7
 
 # Choose whether to run cutadapt
-run_cutadapt: FALSE
+run_cutadapt: TRUE
 
 # Adapters for cutadapt
 fwd_adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
@@ -53,13 +53,13 @@ maxn: 10
 ### BMtagger Parameters
 
 # Choose whether to run bmtagger
-run_bmtagger: FALSE
+run_bmtagger: TRUE
 
 # Index for bmfilter (part of bmtagger), bitmask file
-bmfilter_ref: "/bulk/IMCshared_bulk/shared/dbs/bmtaggerDB/hg19_rRNA_mito_Hsapiens_rna/hg19_rRNA_mito_Hsapiens_rna_reference.bitmask"
+bmfilter_ref: "/bulk/IMCshared_bulk/shared/dbs/bmtaggerDB/hg19_rRNA_mito_Hsapiens_rna/hg19_rRNA_mito_Hsa$
 
 # Index for srprism (part of bmtagger)
-srprism_ref: "/bulk/IMCshared_bulk/shared//dbs/bmtaggerDB/hg19_rRNA_mito_Hsapiens_rna/hg19_rRNA_mito_Hsapiens_rna_reference.srprism"
+srprism_ref: "/bulk/IMCshared_bulk/shared//dbs/bmtaggerDB/hg19_rRNA_mito_Hsapiens_rna/hg19_rRNA_mito_Hsa$
 
 ### BBMap parameters
 # Choose whether to run bbmap
